@@ -41,7 +41,7 @@ class FlightFilterImplTest {
     @Test
     void filteringByTimeOnGround() {
         Segment segment1 = new Segment(LocalDateTime.now(), LocalDateTime.now().plusHours(1));
-        Segment segment2 = new Segment(LocalDateTime.now().plusHours(3), LocalDateTime.now().plusHours(5));
+        Segment segment2 = new Segment(LocalDateTime.now().plusHours(4), LocalDateTime.now().plusHours(5));
         Flight flight = new Flight(new ArrayList<>(List.of(segment1, segment2)));
         List<Flight> flights = new ArrayList<>();
         flights.add(flight);

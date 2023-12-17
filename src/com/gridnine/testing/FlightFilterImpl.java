@@ -46,7 +46,7 @@ public class FlightFilterImpl implements FlightFilter {
     @Override
     public List<Flight> filteringByTimeOnGround(List<Flight> flights, int hours) {
         return flights.stream()
-                .filter(flight -> calculateGroundTime(flight.getSegments()) < hours)
+                .filter(flight -> !(calculateGroundTime(flight.getSegments()) > hours))
                 .collect(Collectors.toList());
     }
 
